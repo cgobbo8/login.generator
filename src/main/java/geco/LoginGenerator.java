@@ -1,6 +1,8 @@
 package geco;
 
 import java.text.Normalizer;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -38,7 +40,13 @@ public class LoginGenerator {
         String n = deAccent(nom.substring(0,3).toUpperCase());
         String login = p+n ;
         if (loginService.loginExists(login)) {
-            login = login + "1" ;
+            int cpt = 1;
+            String newLogin = login;
+            while (loginService.loginExists(newLogin)) {
+                newLogin = login + cpt;
+                cpt++;
+            }
+            login = newLogin;
         }
         loginService.addLogin(login);
         return login;
@@ -55,7 +63,6 @@ public class LoginGenerator {
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
-
 
 
 

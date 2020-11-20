@@ -15,8 +15,21 @@ public class LoginGeneratorTest {
 
     @Test
     public void CT1() {
+        String nom = "Durand";
+        String prenom = "Paul";
         assertFalse(loginService.findAllLogins().contains("PDUR"));
-        lg.generateLoginForNomAndPrenom("Durand","Paul");
+        lg.generateLoginForNomAndPrenom(nom,prenom);
         assertTrue(loginService.findAllLogins().contains("PDUR"));
+    }
+
+    @Test
+    public void CT2() {
+        String nom = "Ralling";
+        String prenom = "John";
+
+        assertFalse(loginService.findAllLogins().contains("JRAL2"));
+        lg.generateLoginForNomAndPrenom(nom,prenom);
+        assertTrue(loginService.findAllLogins().contains("JRAL2"));
+
     }
 }
