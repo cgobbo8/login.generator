@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Generator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>You need a new password ?</h1>
-    <h2>But you don't know how ?</h2>
-    <p>Let's use our Login Generator</p>
+    <div class="container">
+        <div class="text-container">
+            <h1>You need a new <span class="word">password</span></h1>
+            <h2>But you don't know how ?</h2>
+            <br>
+            <br>
+            <p class="catchphrase">Let's use our Login Generator</p>
+            <a href="https://github.com/cgobbo8/login.generator">https://github.com/cgobbo8/login.generator</a>
+        </div>
+        <img src="./ressources/undraw_authentication.svg" id="illustration" alt="">
+    </div>
+
+    <script>
+        let word = document.querySelector('.word')
+
+        const changeWord = mot => {
+            setTimeout(() => {
+                word.classList.add("text-low")
+                word.classList.add("hidden")
+
+
+                setTimeout(() => {
+                    word.innerHTML = mot;
+
+                    word.classList.remove("text-low")
+                    word.classList.remove("hidden")
+                }, 1000)
+            }, 3000)
+        }
+        let cpt = 0;
+        setInterval(() => {
+            cpt%2 == 0 ? changeWord("Login ?") : changeWord("Password ?")
+            
+            cpt ++;
+        }, 4000)
+
+        
+    </script>
 </body>
+
 </html>

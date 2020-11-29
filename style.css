@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ade5f6;
+    font-family : 'Roboto','sans-serif';
+}
+
+h1 {
+    font-family : 'Poppins','Roboto','sans-serif';
+    font-weight :600;
+    text-shadow: 1px 1px 2px #56c0e0;
+    font-size : 2rem;
+    text-transform: uppercase;
+    color: #2a2a2a;
+}
+
+h2 {
+    font-family : 'Poppins','Roboto','sans-serif';
+    color: #494949;
+}
+
+.word {
+    display: inline;
+    transition: .3s;
+    position: absolute;
+    /* transform: translateY(-2%); */
+    padding-left: 10px;
+}
+
+.word.hidden {
+    opacity: 0;
+}
+
+.word.text-low {
+    transform: translateY(50%);
+}
+
+.word.text-high {
+    transform: translateX(10%) translateY(-50%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row;
+}
+
+.text-container {
+    padding: 50px;
+}
+
+#illustration {
+    margin: 50px;
+    height: 300px;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+    color: rgb(55, 53, 136);
+}
+
+a:hover {
+    color: rgb(31, 31, 77);
+}
+
+.catchphrase {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(52, 108, 240);
+}
+
+@media screen and (max-width : 900px) {
+    .container {
+        flex-direction: column;    
+    }
+}
+
+@media screen and (min-width : 1100px) {
+    #illustration {
+        height: 500px;
+    }
+}
