@@ -81,6 +81,11 @@ a:hover {
     color: rgb(52, 108, 240);
 }
 
+.btn-git {
+    display: block;
+    padding-top: 20px;
+}
+
 @media screen and (max-width : 1050px) {
     .container {
         flex-direction: column;    
