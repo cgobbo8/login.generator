@@ -81,7 +81,7 @@ a:hover {
     color: rgb(52, 108, 240);
 }
 
-@media screen and (max-width : 900px) {
+@media screen and (max-width : 1050px) {
     .container {
         flex-direction: column;    
     }

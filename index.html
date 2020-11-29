@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="text-container">
-            <h1>You need a new <span class="word">password</span></h1>
+            <h1>You need a new <span class="word">password ?</span></h1>
             <h2>But you don't know how ?</h2>
             <br>
             <br>
@@ -36,14 +36,14 @@
                     word.classList.remove("text-low")
                     word.classList.remove("hidden")
                 }, 1000)
-            }, 3000)
+            }, 1000)
         }
         let cpt = 0;
         setInterval(() => {
             cpt%2 == 0 ? changeWord("Login ?") : changeWord("Password ?")
             
             cpt ++;
-        }, 4000)
+        }, 2000)
 
         
     </script>
